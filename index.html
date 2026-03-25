@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>貴格會石龜溪教會｜溫暖文青風網誌</title>
+  <style>
+    :root {
+      --cream: #f7f1e8;
+      --paper: #fffaf4;
+      --beige: #eadfce;
+      --brown: #6f5846;
+      --brown-deep: #4f3d31;
+      --green: #7f9b84;
+      --green-soft: #aabca8;
+      --gold: #c7a86b;
+      --text: #4b4037;
+      --muted: #7a6a5e;
+      --shadow: 0 14px 34px rgba(111, 88, 70, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --max-width: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.72), transparent 35%),
+        linear-gradient(180deg, #f8f4ee 0%, #f5ede2 100%);
+      line-height: 2;
+      letter-spacing: 0.02em;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(255,255,255,0.04), rgba(255,255,255,0.04));
+      opacity: 0.5;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 92px 20px 70px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(95, 76, 61, 0.52), rgba(95, 76, 61, 0.52)),
+        url("圖檔1.jpg") center/cover no-repeat;
+      color: #fffdf9;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,250,244,0) 0%, rgba(245,237,226,1) 100%);
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      background: rgba(111, 88, 70, 0.18);
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-xl);
+      padding: 34px 24px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 250, 244, 0.18);
+      font-size: 0.92rem;
+      letter-spacing: 0.12em;
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2.2rem, 4.3vw, 3.7rem);
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .hero p {
+      margin: 0 auto;
+      max-width: 640px;
+      font-size: 1.05rem;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: -30px auto 64px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      background: rgba(255, 250, 244, 0.94);
+      border: 1px solid rgba(111, 88, 70, 0.08);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 34px 28px;
+      margin-bottom: 24px;
+    }
+
+    .intro-card {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .logo-wrap {
+      text-align: center;
+      background: linear-gradient(180deg, #fffdf9, #f3ebdf);
+      border-radius: 24px;
+      padding: 16px;
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      display: inline-block;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: var(--brown-deep);
+      font-size: 1.7rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 52px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      border-radius: 999px;
+      margin-top: 10px;
+    }
+
+    p {
+      margin: 0 0 16px;
+      font-size: 1.02rem;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    .quote {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--gold);
+      background: #f8f2ea;
+      border-radius: 0 16px 16px 0;
+      color: var(--brown);
+      font-style: italic;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .info-item {
+      background: linear-gradient(180deg, #fffdf9, #f5ede3);
+      border: 1px solid #eee2d5;
+      border-radius: var(--radius-lg);
+      padding: 18px;
+    }
+
+    .info-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--green);
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+    }
+
+    .info-item a {
+      color: var(--brown-deep);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(79, 61, 49, 0.35);
+    }
+
+    .schedule-image {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .schedule-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .schedule-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .schedule-list li {
+      background: linear-gradient(180deg, #fffdf8, #f5ede3);
+      border: 1px solid #eee2d5;
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    .schedule-list strong {
+      color: var(--brown-deep);
+    }
+
+    .closing {
+      background: linear-gradient(135deg, rgba(127,155,132,0.12), rgba(199,168,107,0.12));
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 8px 20px 42px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        padding: 72px 16px 54px;
+      }
+
+      .hero-inner {
+        padding: 28px 18px;
+      }
+
+      main {
+        padding: 0 14px;
+      }
+
+      section {
+        padding: 26px 18px;
+      }
+
+      .intro-card {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Shigui Creek Church</div>
+      <h1>貴格會石龜溪教會</h1>
+      <p>
+        在雲林斗南的一隅，靜靜守著信仰、陪伴社區，也用溫柔與盼望，迎接每一位走進來的人。
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="intro-card">
+        <div class="logo-wrap">
+          <img src="圖檔1.jpg" alt="石龜溪教會 Logo" />
+        </div>
+        <div>
+          <h2>教會簡介</h2>
+          <p class="lead">
+            石龜溪教會位於雲林縣斗南鎮，是一間扎根地方、承載歷史與信仰的基督教會。自1958年創立以來，教會持續在這片土地上傳遞福音，成為在地居民心靈的依靠與屬靈的家。
+          </p>
+          <div class="quote">「在歲月流轉之中，仍然守住初心；在平凡日常裡，持續傳遞愛與盼望。」</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>歷史與傳承</h2>
+      <p>
+        石龜溪教會創立於1958年6月24日，由慕維德牧師開拓建立。在早期資源有限的環境中，牧師憑著堅定的信心與對福音的熱忱，將信仰帶入社區，逐步建立起穩固的教會根基。這段歷史，不僅見證了教會的誕生，也象徵著信仰在困境中成長與延續的力量。
+      </p>
+      <p>
+        2018年10月1日起，由邱菊停傳道與其家人承接教會服事，帶領教會邁向新的階段。在新的世代中，教會持續維持穩定的聚會與多元事工，關懷不同年齡層的需要，讓信仰能貼近生活、走入人群。
+      </p>
+    </section>
+
+    <section>
+      <h2>教會資訊</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <strong>地址</strong>
+          雲林縣斗南鎮南生路43號（630）
+        </div>
+        <div class="info-item">
+          <strong>聯絡電話</strong>
+          05-5967928
+        </div>
+        <div class="info-item">
+          <strong>Email</strong>
+          <a href="mailto:shigui.church@gmail.com">shigui.church@gmail.com</a>
+        </div>
+        <div class="info-item">
+          <strong>主日時間</strong>
+          每週日下午 3:00
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule-image">
+      <img src="圖檔2.jpg" alt="石龜溪教會聚會時間表" />
+    </section>
+
+    <section>
+      <h2>聚會與活動時間</h2>
+      <ul class="schedule-list">
+        <li><strong>晨禱：</strong>週二至週六 06:00–07:00</li>
+        <li><strong>陪讀班：</strong>週一 12:30–18:00</li>
+        <li><strong>抱雛之窩：</strong>週三 14:30–15:30</li>
+        <li><strong>禱告會：</strong>週四 19:30–20:30</li>
+        <li><strong>鼓動時光：</strong>週六 09:30–10:30</li>
+        <li><strong>青少年小組：</strong>週六 11:00–12:30</li>
+        <li><strong>主日聚會：</strong>週日 15:00–16:00</li>
+        <li><strong>兒童主日學：</strong>週日 15:00–16:00</li>
+      </ul>
+    </section>
+
+    <section class="closing">
+      <h2>寫在最後</h2>
+      <p>
+        石龜溪教會是一個充滿愛與接納的地方。在這裡，無論是長期信徒，或是第一次走進教會的朋友，都能感受到溫暖與陪伴。透過敬拜、禱告與彼此關懷，教會不僅建立信仰，也建立人與人之間真誠的連結。
+      </p>
+      <p>
+        在變動快速的現代社會中，石龜溪教會依然安靜守護著初心，像一盞溫暖的燈，在地方角落持續散發平安、盼望與力量。
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 貴格會石龜溪教會 Shigui Creek Church
+  </footer>
+</body>
+</html>
