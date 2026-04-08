@@ -57,7 +57,7 @@
       text-align: center;
       background:
         linear-gradient(rgba(95, 76, 61, 0.52), rgba(95, 76, 61, 0.52)),
-        url("圖檔1.jpg") center/cover no-repeat;
+        url("圖檔3.jpg") center/cover no-repeat;
       color: #fffdf9;
     }
 
@@ -239,6 +239,66 @@
       color: var(--brown-deep);
     }
 
+    .sunshine-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .sunshine-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .sunshine-gallery .gallery-main {
+      grid-column: 1 / -1;
+    }
+
+    .sunshine-photo {
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      background: #fff;
+    }
+
+    .sunshine-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sunshine-quote {
+      margin: 16px 0;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(255, 214, 140, 0.25), rgba(255, 245, 220, 0.9));
+      border-left: 4px solid #e0a63a;
+      font-weight: 600;
+      color: #5a3e1b;
+    }
+
+    .sunshine-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .sunshine-points li {
+      background: linear-gradient(180deg, #fffdf8, #f5ede3);
+      border: 1px solid #eee2d5;
+      border-radius: 16px;
+      padding: 14px 16px;
+    }
+
+    .sunshine-points strong {
+      color: var(--brown-deep);
+    }
+
     .closing {
       background: linear-gradient(135deg, rgba(127,155,132,0.12), rgba(199,168,107,0.12));
     }
@@ -267,8 +327,14 @@
         padding: 26px 18px;
       }
 
-      .intro-card {
+      .intro-card,
+      .sunshine-grid,
+      .sunshine-gallery {
         grid-template-columns: 1fr;
+      }
+
+      .sunshine-gallery .gallery-main {
+        grid-column: auto;
       }
     }
   </style>
@@ -329,6 +395,10 @@
           <strong>主日時間</strong>
           每週日下午 3:00
         </div>
+        <div class="info-item">
+          <strong>主責傳道</strong>
+          邱菊停傳道
+        </div>
       </div>
     </section>
 
@@ -350,8 +420,41 @@
       </ul>
     </section>
 
+    <section>
+      <h2>小太陽陪讀班</h2>
+      <div class="sunshine-grid">
+        <div>
+          <p>
+            小太陽陪讀班是石龜溪教會陪伴孩子成長的重要事工，盼望在課後提供一個溫暖、安全且充滿關懷的空間，讓孩子們能安心寫作業、培養學習習慣，也在日常互動中感受到被接納與陪伴。
+          </p>
+          <p>
+            在陪讀班裡，除了課業指導之外，孩子們也會一起用餐、參與活動、學習分享與感恩。透過老師與同工們細心的照顧，讓每位孩子都能在愛中成長，發展自信，並在生活中建立良好的品格與人際關係。
+          </p>
+          <p>
+            <div class="sunshine-quote">我們相信，每一位孩子都像小太陽一樣，有自己的光與可能；透過陪伴、鼓勵與愛，他們能在成長路上更穩定地發光。</div>
+          </p>
+          <ul class="sunshine-points">
+            <li><strong>課後陪伴</strong>提供穩定的學習環境，幫助孩子完成作業與建立規律。</li>
+            <li><strong>生活關懷</strong>透過陪伴、對話與互動，讓孩子在成長過程中更有安全感。</li>
+            <li><strong>品格培育</strong>在日常中學習尊重、合作、感恩與彼此扶持。</li>
+          </ul>
+        </div>
+        <div class="sunshine-gallery">
+          <div class="sunshine-photo gallery-main">
+            <img src="圖檔4.jpg" alt="小太陽陪讀班活動照片一" />
+          </div>
+          <div class="sunshine-photo">
+            <img src="圖檔5.jpg" alt="小太陽陪讀班活動照片二" />
+          </div>
+          <div class="sunshine-photo">
+            <img src="圖檔6.jpg" alt="小太陽陪讀班活動照片三" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="closing">
-      <h2>寫在最後</h2>
+      <h2>我們期待</h2>
       <p>
         石龜溪教會是一個充滿愛與接納的地方。在這裡，無論是長期信徒，或是第一次走進教會的朋友，都能感受到溫暖與陪伴。透過敬拜、禱告與彼此關懷，教會不僅建立信仰，也建立人與人之間真誠的連結。
       </p>
